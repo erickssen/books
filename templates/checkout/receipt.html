@@ -1,0 +1,82 @@
+{% extends "catalog.html" %}
+
+{% load catalog_filters %}
+
+{% load checkout_tags %}
+
+
+
+
+{% block content %}
+	<table id="receipt" class="table">
+		<caption>Your order has been placed! <br><br>
+			Your Order Number is: {{ order.id }}
+		</caption>
+		<thead>
+			<tr class="info">
+				<th scope="col">Name</th>
+				<th scope="col">Price</th>
+				<th scope="col">Quantity</th>
+				<th class="right" scope="col">Total</th>
+			</tr>
+		</thead>
+
+		<tfoot>
+			<tr>
+				<td colspan="4" class="right" style="height: 30px;">
+				Order Total: {{ order.total|currency }}
+				</td>
+			</tr>
+		</tfoot>
+
+		<tbody>
+			{% for item in order_items %}
+			<tr>
+				<td>{{ item.product.name }}</td> 
+				<td>{{ item.price|currency }}</td>
+				<td>{{ item.quantity }}</td>
+				<td>{{ item.total|currency }}</td> 
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %} 
+
+
+
+ 
+{% block receipt_analytics %} 
+	<!-- enter google analyctics 'order report' code snipped here + order info: {{ order.total }} etc..--> 
+	<script>
+
+
+	</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

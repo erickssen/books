@@ -1,0 +1,15 @@
+
+{% if not request.user.is_authenticated %}
+
+<div class="fr">
+	<a href="{% url login %}?next={{ request_path }}"> 
+		Have an account? <br> Sign in now! 
+	</a> 
+</div> 
+
+{% endif %} 
+
+
+
+
+

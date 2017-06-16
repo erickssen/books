@@ -1,0 +1,86 @@
+
+{% load staticfiles %} 
+
+
+{% block footer %}
+
+
+<div class="jumbotron">
+   <div class="container">
+
+   		<div class="col-md-12">
+		   	<div class="row">
+
+					{% with flatpage_list as pages %}
+					{% for page in pages %}
+						<div class="row">
+							<div class="col-md-4">
+								<ul id="footer-list" class="list-group">
+									<li> <a href="{{ page.url }}">{{ page.title }}</a></li>
+								</ul>
+							</div>
+						</div>
+					{% endfor %}
+					{% endwith %}
+				 
+					<div class="col-md-4">
+					 	<a href="{% url 'show_cart' %}"> Shopping Cart</a> 
+					</div>
+					 
+					<div class="col-md-4">
+						<ul id="footer-list2" class="list-group">
+				  			<li> <a href="{% url 'catalog_home' %}">Home </a></li>
+				  			<li> <a href="{% url 'catalog_home' %}">Returns </a></li>
+				  			<li> <a href="{% url 'catalog_home' %}">Para ayuda </a></li>
+				  			<li> <a href="{% url 'catalog_home' %}">Contact us </a></li>
+				  			<li> <a href="{% url 'catalog_home' %}">Store events </a></li>
+				  		</ul>
+					</div>
+
+		 		 <div id="footer-comp" class="col-lg-4" >
+			          <img class="img-circle" src="../../static/media/images/icons/new_logo.png">
+			          <h2>books</h2>
+			          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis.</p>
+		        </div>
+		    </div>
+		</div>
+
+
+		<ul id="social">
+			<li><a href="https://www.instagram.com/erickssen/?hl=en"> <img src="../../static/media/images/icons/insta.png"></a></li>
+			<li><a href="https://www.facebook.com/erick.oliva.750"> <img src="../../static/media/images/icons/facebook.png"></a></li>
+			<li><a href="https://vimeo.com/140242252"> <img src="../../static/media/images/icons/vimeo.png"></a></li>
+			<li><a href="https://twitter.com/"> <img src="../../static/media/images/icons/twitter.png"></a></li>
+			<li><a href="https://dribbble.com"> <img src="../../static/media/images/icons/dribbble.png"></a></li>
+		</ul>
+
+	 
+
+	</div> 
+</div>
+
+	
+{% endblock %} 
+	  
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+{% load cache %}
+
+{% cache 3600 footer_links %}
+	{# template content here #}
+{% endcache %}
+	
+
+	 

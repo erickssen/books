@@ -1,0 +1,17 @@
+
+{% extends "catalog.html" %}
+
+{% load catalog_tags %}
+
+
+
+{% block content %} 
+
+	<h2>Welcome!</h2>
+	{% product_list recently_viewed 'You Recently Viewed' %}
+	{% product_list view_recs 'Similar Products' %}
+	{% product_list featured 'Featured Products' %}
+	{% product_list search_recs 'Recomended For You' %} 
+
+{% endblock %}
+

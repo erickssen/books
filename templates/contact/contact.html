@@ -1,0 +1,35 @@
+{% extends 'catalog.html' %}
+{% load catalog_tags %}
+{% load crispy_forms_tags %} 
+
+
+ 
+
+
+{% block content %}
+
+<div class='row'>
+	<div class='col-sm-6-offset-3'>
+
+		<h1> {{ page_title }} </h1>
+
+		{% if confirm_message %}
+			<p>{{ confirm_message }}</p>
+		{% endif %}
+
+		{% if form %}
+			<form method="post" action=''>
+				{% csrf_token %}
+				
+				{{ form|crispy }}
+				<input type="submit" value="Submit" class="btn btn-default" />
+			</form>
+		{% endif %}
+
+	</div>
+<div>
+
+{% endblock %} 
+
+
+

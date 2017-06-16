@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+
+
+
+<form  id="search" action="{% url 'search_results' %}" method="get">
+	<h3><label for="id_q">Search</label></h3>
+	<div id="search-bar" >
+		{{ form|crispy }}
+		<input  type="submit" value="Search" class="btn btn-lg btn-primary"/>
+	</div>
+</form>
+
+
+

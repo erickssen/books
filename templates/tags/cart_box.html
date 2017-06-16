@@ -1,0 +1,14 @@
+
+
+{% with cart_item_count as cart_count %}
+
+	<div class="glyphicon glyphicon-shopping-cart">
+		<a href="{% url 'show_cart' %}">
+			<br>
+			{{ cart_count }} Item{{ cart_count|pluralize }}
+		</a>	
+	</div>
+{% endwith %}
+
+
+

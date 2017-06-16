@@ -1,0 +1,56 @@
+
+
+{% extends "catalog.html" %}
+
+{% load catalog_tags %}
+
+
+{% block content %}
+
+		
+
+
+
+
+<h3 id="home-subtitle">{{ page_title }}</h3>
+
+	<div > 
+	 <img  id="home-img" src="https://getmdl.io/templates/android-dot-com/images/slide01.jpg">
+	</div> 
+ 
+
+	<div class="col-sm-6 col-md-3">
+    	<div class="thumbnail">
+			 {% product_list recently_viewed 'Recently Viewed' %} 
+		</div>
+	</div>
+ 
+
+	<div class="col-sm-6 col-md-3">
+    	<div class="thumbnail">
+			{% product_list view_recs 'Similar Products' %}
+		</div>
+	</div>
+
+
+	<div class="col-sm-6 col-md-3">
+    	<div class="thumbnail">
+			{% product_list featured 'Featured Products' %}
+		</div>
+	</div>
+
+
+
+	<div class="col-sm-6 col-md-3">
+    	<div class="thumbnail">
+			{% product_list search_recs 'Recomended For You' %} 
+		</div>
+	</div>
+
+		
+
+ 
+{% endblock %}
+
+
+ 

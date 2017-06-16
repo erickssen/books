@@ -1,0 +1,215 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+        "name": "Django Unleashed",
+        "slug": "Django-Unleashed",
+        "brand": "Django",
+        "sku": "123677",
+        "price": "20.00",
+        "old_price": "30.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 1,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "meta_keywords": "meta_keywords1",
+        "meta_description": "meta description1",
+        "created_at": "2017-04-07T04:42:12.998Z",
+        "updated_at": "2017-05-09T23:09:21.119Z",
+        "image": "images/products/main/django.jpg",
+        "thumbnail": "images/products/thumbnails/django.jpg",
+        "categories": [
+            12,
+            8
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+        "name": "Java",
+        "slug": "Java",
+        "brand": "Java",
+        "sku": "1234",
+        "price": "40.00",
+        "old_price": "50.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 1,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "meta_keywords": "java, compile, eclipse, programming",
+        "meta_description": "Java Platform, Standard Edition",
+        "created_at": "2017-04-07T04:44:24.993Z",
+        "updated_at": "2017-05-09T22:43:00.848Z",
+        "image": "images/products/main/Java_Programming.jpg",
+        "thumbnail": "images/products/thumbnails/Java_Programming.jpg",
+        "categories": [
+            11
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+        "name": "Django",
+        "slug": "Django",
+        "brand": "Django",
+        "sku": "345533",
+        "price": "20.00",
+        "old_price": "40.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 2,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "meta_keywords": "meta_keywords3",
+        "meta_description": "meta description3",
+        "created_at": "2017-04-17T21:42:07.068Z",
+        "updated_at": "2017-05-09T22:18:52.964Z",
+        "image": "images/products/main/django_tango.jpg",
+        "thumbnail": "images/products/thumbnails/django_tango.jpg",
+        "categories": [
+            12,
+            8
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+        "name": "MySql",
+        "slug": "MySql",
+        "brand": "MySql",
+        "sku": "75566",
+        "price": "90.00",
+        "old_price": "100.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 3,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "meta_keywords": "meta_keywords4",
+        "meta_description": "meta description4",
+        "created_at": "2017-04-17T22:28:51.626Z",
+        "updated_at": "2017-05-09T22:32:59.736Z",
+        "image": "images/products/main/mysql.jpg",
+        "thumbnail": "images/products/thumbnails/mysql.jpg",
+        "categories": [
+            10,
+            8,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 16,
+    "fields": {
+        "name": "Javascript",
+        "slug": "Javascript",
+        "brand": "Javascript",
+        "sku": "95677",
+        "price": "20.00",
+        "old_price": "0.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": true,
+        "quantity": 3,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "meta_keywords": "javascript, webdesign, programming",
+        "meta_description": "Javascript",
+        "created_at": "2017-04-17T22:39:34.144Z",
+        "updated_at": "2017-05-09T22:30:53.039Z",
+        "image": "images/products/main/jascript.jpg",
+        "thumbnail": "images/products/thumbnails/javascript.jpg",
+        "categories": [
+            9
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 17,
+    "fields": {
+        "name": "Python",
+        "slug": "Python",
+        "brand": "Python",
+        "sku": "1466366052",
+        "price": "10.00",
+        "old_price": "24.99",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 30,
+        "description": "This book about python programming is written by team of contributors. It introduces the language for new python users and covers key concepts and python modules. Python is a high-level, structured, open-source programming language that can be used for a wide variety of programming tasks.",
+        "meta_keywords": "Computers, Technology, Programming Languages",
+        "meta_description": "This book about python programming is written by team of contributors. It introduces the language for new python users and covers key concepts and python modules.",
+        "created_at": "2017-05-09T21:17:47.582Z",
+        "updated_at": "2017-05-09T22:44:34.672Z",
+        "image": "images/products/main/python_programming.jpg",
+        "thumbnail": "images/products/thumbnails/python_programming.jpg",
+        "categories": [
+            12,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 18,
+    "fields": {
+        "name": "Python The Hard Way",
+        "slug": "python-hard-way",
+        "brand": "python",
+        "sku": "0321884914",
+        "price": "15.00",
+        "old_price": "0.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 30,
+        "description": "This book about python programming is written by team of contributors. It introduces the language for new python users and covers key concepts and python modules. Python is a high-level, structured, open-source programming language that can be used for a wide variety of programming tasks.",
+        "meta_keywords": "programming, python, computer science",
+        "meta_description": "A Very Simple Introduction to the Terrifyingly Beautiful World of Computers and Code",
+        "created_at": "2017-05-09T21:55:07.815Z",
+        "updated_at": "2017-05-09T21:55:07.815Z",
+        "image": "images/products/main/python_hardway.jpg",
+        "thumbnail": "images/products/thumbnails/python_hardway.jpg",
+        "categories": [
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 19,
+    "fields": {
+        "name": "Head First Design Patterns",
+        "slug": "head-first-design-patterns",
+        "brand": "O'reilly",
+        "sku": "12234",
+        "price": "20.00",
+        "old_price": "0.00",
+        "is_active": true,
+        "is_bestseller": true,
+        "is_featured": false,
+        "quantity": 5,
+        "description": "Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves. * The authors begin by describing what patterns are and how they can help you",
+        "meta_keywords": "java, design patterns, programming, oop",
+        "meta_description": "reusable designs without having to rediscover the design solutions themselves",
+        "created_at": "2017-05-09T23:18:42.340Z",
+        "updated_at": "2017-05-09T23:18:42.341Z",
+        "image": "images/products/main/head_first_design_patterns.jpg",
+        "thumbnail": "images/products/thumbnails/head_first_design_patterns.jpg",
+        "categories": [
+            11
+        ]
+    }
+}
+]

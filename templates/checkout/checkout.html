@@ -1,0 +1,205 @@
+{% extends "catalog.html" %}
+
+{% load catalog_filters %} 
+
+{% load checkout_tags %}
+
+{% load staticfiles %} 
+
+{% load login_tag %} 
+
+{% load crispy_forms_tags %}
+
+ 
+
+{% block content %}
+
+<!-- <link rel="stylesheet" href='{% static "stripe.css" %}' />  -->
+
+{{ logintag }} 
+<script src="https://js.stripe.com/v2/"></script>
+<script src="https://js.stripe.com/v3/"></script>
+  
+    <form method="POST" action="" id="payment-form"> 
+     <span>Shipping</span>
+
+      {% csrf_token %}
+      {{ form|crispy }}
+  
+      <!-- <div class="group"> -->
+              <!--  <legend>Shipping Info</legend>
+               <label> {% form_table_row form.shipping_name %} </label>
+               <label> {% form_table_row form.shipping_address_1 %} </label>
+               <label> {% form_table_row form.shipping_address_2 %} </label>
+               <label> {% form_table_row form.shipping_city %} </label>
+               <label> {% form_table_row form.shipping_state %} </label>
+               <label> {% form_table_row form.shipping_zip %} </label>
+               <label> {% form_table_row form.shipping_country %} </label> -->
+      <!-- </div> -->
+
+
+     <!--  <div class="group">
+            <label> {% form_table_row form.email %} </label>
+            <label> {% form_table_row form.phone %} </label>
+      </div> -->
+
+
+      <div class="group">
+          <span>Card</span>
+          <label>
+              <span>Name</span>
+              <input name="cardholder-name" class="field" placeholder="Jane Doe" />
+          </label>
+
+          <label>
+              <span>Phone</span>
+              <input name="cardholder-phone" class="field" placeholder="(123) 456-7890" />
+          </label>
+      </div> 
+       
+       <div class="group">
+          <label>
+              <div id="card-element" class="field"></div>
+          </label>
+      </div>
+
+   
+      <button type="submit" > Pay  {{ total|currency }} </button>
+
+      <div class="outcome">
+          <div class="error"></div>
+          <div class="success">
+            Success! Your Stripe token is <span class="token"></span>
+          </div>
+      </div>
+
+    </form> 
+
+
+{% endblock %}
+
+
+
+{% block css %}
+	<link rel="stylesheet" href='{% static "stripe.css" %}' /> 
+{% endblock %}
+
+
+
+
+{% block script %}
+ 
+ 
+<script>
+
+ 
+
+
+var stripe = Stripe('pk_test_dgcBsrcAnRwS4tVhNf9x1iCZ');
+var elements = stripe.elements();
+
+
+var card = elements.create('card', {
+  style: {
+    base: {
+      iconColor: '#666EE8',
+      color: '#31325F',
+      lineHeight: '40px',
+      fontWeight: 300,
+      fontFamily: 'Helvetica Neue',
+      fontSize: '15px',
+
+      '::placeholder': {
+        color: '#CFD7E0',
+      },
+    },
+  }
+});
+card.mount('#card-element');
+
+ 
+ 
+
+
+document.getElementById('payment-form').addEventListener('submit', function(e) {
+
+    e.preventDefault();
+    
+    var form = document.getElementById('payment-form'); 
+
+
+    var extraDetails = {
+      name: form.querySelector('input[name=cardholder-name]').value,
+      phone: form.querySelector('input[name=cardholder-phone]').value, 
+      
+    };
+
+    stripe.createToken(card, extraDetails).then(setOutcome);
+    
+});
+ 
+
+
+
+
+function setOutcome(result) {
+    
+
+    var successElement = document.querySelector('.success');
+    var errorElement = document.querySelector('.error');
+    successElement.classList.remove('visible');
+    errorElement.classList.remove('visible');
+
+     
+
+    if (result.token) {
+        // Use the token to create a charge or a customer
+        // https://stripe.com/docs/charges
+        successElement.querySelector('.token').textContent = result.token.id;
+        successElement.classList.add('visible');
+
+
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', result.token.id);
+        form.appendChild(hiddenInput);
+
+        // Submit the form
+        form.submit();
+
+    } 
+    else if (result.error) {
+       errorElement.textContent = result.error.message;
+       errorElement.classList.add('visible');
+    }
+}
+
+
+
+card.on('change', function(event) {
+  setOutcome(event);
+});
+
+
+
+
+
+</script>
+
+
+
+
+{% endblock %}
+
+
+
+ 
+
+
+
+
+
+
+

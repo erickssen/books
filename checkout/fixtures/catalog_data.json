@@ -1,0 +1,82 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 7,
+  "fields": {
+    "name": "Category1",
+    "slug": "category1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "is_active": true,
+    "meta_keywords": "meta_keywords1",
+    "meta_description": "meta description",
+    "created_at": "2017-04-07T04:38:52.182Z",
+    "updated_at": "2017-04-07T05:35:49.050Z"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+    "name": "Category2",
+    "slug": "category2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "is_active": true,
+    "meta_keywords": "meta_keywords2",
+    "meta_description": "meta description2",
+    "created_at": "2017-04-07T04:39:20.285Z",
+    "updated_at": "2017-04-07T05:35:57.163Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Product1",
+    "slug": "product1",
+    "brand": "brand1",
+    "sku": "123677",
+    "price": "20.00",
+    "old_price": "30.00",
+    "is_active": true,
+    "is_bestseller": true,
+    "is_featured": false,
+    "quantity": 1,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "meta_keywords": "meta_keywords1",
+    "meta_description": "meta description1",
+    "created_at": "2017-04-07T04:42:12.998Z",
+    "updated_at": "2017-04-13T02:18:03.947Z",
+    "image": "images/products/main/img6_ZQxbrEU.jpg",
+    "thumbnail": "images/products/thumbnails/img6_Az1HZ01.jpg",
+    "categories": [
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "Product2",
+    "slug": "product2",
+    "brand": "brand2",
+    "sku": "1234",
+    "price": "40.00",
+    "old_price": "50.00",
+    "is_active": true,
+    "is_bestseller": true,
+    "is_featured": false,
+    "quantity": 1,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "meta_keywords": "meta_keywords2",
+    "meta_description": "meta description2",
+    "created_at": "2017-04-07T04:44:24.993Z",
+    "updated_at": "2017-04-13T02:18:14.807Z",
+    "image": "images/products/main/img5_fmVPRHW.jpg",
+    "thumbnail": "images/products/thumbnails/img5_TihChK8.jpg",
+    "categories": [
+      8
+    ]
+  }
+}
+]

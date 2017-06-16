@@ -1,0 +1,54 @@
+{% extends "catalog.html" %}
+{% load catalog_filters %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+	<table id="receipt" class="table">
+		<caption>Details for order # {{ order.id }}</caption>
+		<thead>
+			<tr class="active">>
+				<th scope="col">Name</th>
+				<th scope="col">Price</th>
+				<th scope="col">Quantity</th>
+				<th class="right" scope="col">Total</th>
+			</tr>
+		</thead>
+
+		<tfoot>
+			<tr>
+				<td colspan="4" class="right" style="height: 30px;">
+					Order Total: {{ order.total|currency }}
+				</td>
+			</tr>
+		</tfoot>
+
+		<tbody>
+			{% for item in order_items %}
+			<tr>
+				<td> <a href="{{ item.get_absolute_url }}"> {{ item }} </a> </td>
+				<td> {{ item.price|currency }}</td>
+				<td>{{ item.quantity }}</td>
+				<td> {{ item.total|currency }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %} 
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
